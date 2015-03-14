@@ -1,0 +1,21 @@
+<link rel="import" href="packages/polymer/polymer.html">
+<link rel="import" href="packages/core_elements/core_icons.html">
+<link rel="import" href="packages/core_elements/core_icon.html">
+<link rel="import" href="packages/core_elements/core_icon_button.html">
+<link rel="import" href="packages/core_elements/core_toolbar.html">
+<link rel="import" href="packages/core_elements/core_header_panel.html">
+
+<polymer-element name="stock-app">
+  <template>
+    <style>
+      .menu-bar {
+        background-color: lightblue;
+      }
+    </style>
+      <core-toolbar class="menu-bar">
+        <core-icon icon="home"></core-icon>
+        <core-icon-button class="smaller" icon="add"> New Portfolio</core-icon-button>
+      </core-toolbar>
+  </template>
+  <script type="application/dart" src="../lib/stock_app.dart"></script>
+</polymer-element>
