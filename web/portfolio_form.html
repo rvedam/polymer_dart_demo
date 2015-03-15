@@ -1,0 +1,22 @@
+<link rel="import" href="packages/polymer/polymer.html">
+
+<polymer-element name="portfolio-form">
+  <style>
+    .field {
+      margin-bottom: 12px;
+    }  
+  </style>
+  <template>
+    <form on-submit="{{validatePortfolio}}">
+      <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" maxlength="100" value="{{portfolio.name}}" />
+      </div>
+      <div class="field">
+        <label for="name">Description:</label>
+        <input type="text" maxlength="100" value="{{portfolio.description}}" />
+      </div>
+      
+    </form>
+  </template>
+</polymer-element>
