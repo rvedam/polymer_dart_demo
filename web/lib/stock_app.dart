@@ -6,8 +6,13 @@ import 'dart:html';
 class StockAppElement extends PolymerElement {
   @observable List<StockPortfolio> portfolios;
   
+  @observable bool addPortfolio = false;
+  
   StockAppElement.created() : super.created() {
   }
   
-  
+  showPortfolioList(Event event, var detail, Node sender) {
+    event.preventDefault();
+    
+  }
 }

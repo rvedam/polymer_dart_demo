@@ -4,18 +4,29 @@
 <link rel="import" href="packages/core_elements/core_icon_button.html">
 <link rel="import" href="packages/core_elements/core_toolbar.html">
 <link rel="import" href="packages/core_elements/core_header_panel.html">
+<link rel="import" href="portfolio_form.html">
 
 <polymer-element name="stock-app">
   <template>
     <style>
+      core-header-panel {
+        height: 100%; 
+      }
       .menu-bar {
         background-color: lightblue;
       }
     </style>
-      <core-toolbar class="menu-bar">
-        <core-icon icon="home"></core-icon>
-        <core-icon-button class="smaller" icon="add"> New Portfolio</core-icon-button>
-      </core-toolbar>
+     <core-header-panel flex>
+       <core-toolbar class="menu-bar">
+          <core-icon icon="home" on-click="{{showPortfolioList}}"></core-icon>
+          <core-icon-button class="smaller" icon="add"> New Portfolio</core-icon-button>
+       </core-toolbar>
+       <template if="{{addPortfolio}}">
+       </template>
+       <template if="{{!addPortfolio}}">
+         <portfolio-form></portfolio-form>
+       </template>
+     </core-header-panel>
   </template>
-  <script type="application/dart" src="../lib/stock_app.dart"></script>
+  <script type="application/dart" src="lib/stock_app.dart"></script>
 </polymer-element>
