@@ -1,6 +1,6 @@
-import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'models.dart';
+import 'dart:html';
 
 @CustomTag('portfolio-form')
 class PortfolioFormElement extends PolymerElement {
