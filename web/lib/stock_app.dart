@@ -4,7 +4,7 @@ import 'dart:html';
 
 @CustomTag('stock-app')
 class StockAppElement extends PolymerElement {
-  @observable List<StockPortfolio> portfolios;
+  @observable List<StockPortfolio> portfolios = toObservable([]);
   
   @observable bool addPortfolio = false;
   

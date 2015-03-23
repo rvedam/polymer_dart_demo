@@ -31,7 +31,7 @@
          <portfolio-form class="component" on-validportfolio="{{updatePortfolioList}}"></portfolio-form>
        </template>
        <template if="{{!addPortfolio}}">
-          <template repeat="{{portfolio in portfolios">
+          <template repeat="{{portfolio in portfolios}}">
             <portfolio-element portfolio="{{portfolio}}"></portfolio-element>
           </template>
        </template>
