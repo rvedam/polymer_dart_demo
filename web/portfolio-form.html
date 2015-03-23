@@ -2,23 +2,28 @@
 
 <polymer-element name="portfolio-form">
   <style>
+    .portfolio-display {
+      background: #333;
+    }
     .field {
       margin-bottom: 12px;
     }  
   </style>
   <template>
     <form on-submit="{{validatePortfolio}}">
-      <div class="field">
-        <label for="name">Name:</label>
-        <input type="text" maxlength="100" value="{{portfolio.name}}" />
+      <div class="portfolio-display">
+        <div class="field">
+          <label for="name">Name:</label>
+          <input type="text" maxlength="100" value="{{portfolio.name}}" />
+        </div>
+        <div class="field">
+          <label for="name">Description:</label>
+          <input type="text" maxlength="100" value="{{portfolio.description}}" />
+        </div>
+        <template repeat="{{stock in portfolio.stocks}}">
+        </template>
+        <button type="submit">Create</button>
       </div>
-      <div class="field">
-        <label for="name">Description:</label>
-        <input type="text" maxlength="100" value="{{portfolio.description}}" />
-      </div>
-      <template repeat="{{stock in portfolio.stocks}}">
-      </template>
-      <button type="submit">Create</button>
     </form>
   </template>
   <script type="application/dart" src="lib/portfolio_form.dart"></script>
