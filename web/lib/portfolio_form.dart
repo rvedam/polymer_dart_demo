@@ -9,7 +9,7 @@ class PortfolioFormElement extends PolymerElement {
   @observable String descErrorMessage = '';
   
   PortfolioFormElement.created() : super.created() {
-    
+    portfolio = new StockPortfolio();
   }
   
   validatePortfolio(Event event, Object detail, Node sender) {

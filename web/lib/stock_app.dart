@@ -21,4 +21,10 @@ class StockAppElement extends PolymerElement {
     event.preventDefault();
     addPortfolio = true;
   }
+  
+  updatePortfolioList(Event event, var detail, Node sender) {
+    event.preventDefault();
+    portfolios.add(detail['portfolio']);
+    addPortfolio = false;
+  }
 }

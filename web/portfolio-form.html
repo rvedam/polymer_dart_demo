@@ -16,7 +16,9 @@
         <label for="name">Description:</label>
         <input type="text" maxlength="100" value="{{portfolio.description}}" />
       </div>
-      
+      <template repeat="{{stock in portfolio.stocks}}">
+      </template>
+      <button type="submit">Create</button>
     </form>
   </template>
   <script type="application/dart" src="lib/portfolio_form.dart"></script>
