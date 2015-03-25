@@ -6,6 +6,7 @@ environment:
 dependencies:
   browser: any
   core_elements: any
+  json_object: any
   paper_elements: any
   polymer: '>=0.15.1'
 transformers:

@@ -14,4 +14,9 @@ class StockPortfolio extends Observable {
     this.stocks = toObservable(new List<Stock>());
   }
   
+  update() {
+    for(var i = 0; i < stocks.length; i++) {
+      stocks[i].updateInfo();
+    }
+  }
 }
