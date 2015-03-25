@@ -4,6 +4,7 @@
   <style>
   .portfolio-display {
     background: #555;
+    margin: 5px;
   }
   .field {
     margin-bottom: 8px;
@@ -21,20 +22,18 @@
         <table>
           <tr>
             <th><b>Symbol</b></th>
+            <th><b>Company Name</b></th>
             <th><b>Current Price</b></th>
             <th><b>Day High</b></th>
             <th><b>Day Low</b></th>
           </tr>
-          <!--
-          <template repeat="{{stock in portfolio.stocks}}">
-            <tr>
+          <tr template repeat="{{stock in portfolio.stocks}}">
+              <td>{{stock.symbol}}</td>
               <td>{{stock.name}}</td>
               <td>{{stock.currentPrice}}</td>
               <td>{{stock.daysHigh}}</td>
               <td>{{stock.daysLow}}</td>
-            </tr>
-          </template>
-          -->
+          </tr>
         </table>
       </div>
     </div>

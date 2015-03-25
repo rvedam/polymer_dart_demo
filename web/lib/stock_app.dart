@@ -10,8 +10,7 @@ class StockAppElement extends PolymerElement {
   
   StockAppElement.created() : super.created() {
   }
-  
-  
+    
   showPortfolioList(Event event, var detail, Node sender) {
     event.preventDefault();
     addPortfolio = false;

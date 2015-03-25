@@ -1,4 +1,6 @@
 <link rel="import" href="packages/polymer/polymer.html">
+<link rel="import" href="packages/core_elements/core_icons.html">
+<link rel="import" href="packages/core_elements/core_icon.html">
 
 <polymer-element name="portfolio-form">
   <style>
@@ -20,7 +22,14 @@
           <label for="name">Description:</label>
           <input type="text" maxlength="100" value="{{portfolio.description}}" />
         </div>
+        <h3>Enter your stock symbols below</h3>
+        <div class="field">
+            <input type="text" value="{{newStock.symbol}}" maxlength="50"><core-icon icon="add" on-click="{{addStockSymbol}}"></core-icon>
+        </div>        
         <template repeat="{{stock in portfolio.stocks}}">
+          <div class="field">
+            <h5>{{stock.symbol}}</h5>          
+          </div>
         </template>
         <button type="submit">Create</button>
       </div>

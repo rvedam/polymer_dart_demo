@@ -5,14 +5,20 @@ import 'dart:html';
 @CustomTag('portfolio-form')
 class PortfolioFormElement extends PolymerElement {
   @published StockPortfolio portfolio;
-  @observable String nameErrorMessage = '';
-  @observable String descErrorMessage = '';
+  
+  @observable Stock newStock = new Stock();
   
   PortfolioFormElement.created() : super.created() {
     portfolio = new StockPortfolio();
   }
   
-  validatePortfolio(Event event, Object detail, Node sender) {
+  addStockSymbol(Event event, var detail, Node sender) {
+    //event.preventDefault();
+    portfolio.stocks.add(newStock);
+    newStock = new Stock();
+  }
+  
+  validatePortfolio(Event event, var detail, Node sender) {
     event.preventDefault();
     dispatchEvent(new CustomEvent('validportfolio',
         detail: {'portfolio': portfolio}));

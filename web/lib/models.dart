@@ -1,5 +1,6 @@
 library polymer_demo.models;
 
+import 'dart:js';
 import 'package:polymer/polymer.dart';
 
 part 'stock.dart';

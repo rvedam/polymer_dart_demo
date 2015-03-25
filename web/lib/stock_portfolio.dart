@@ -10,6 +10,8 @@ class StockPortfolio extends Observable {
   @observable List<Stock> stocks;
   
   // make name required parameter to make it easier to keep track
-  StockPortfolio([this.name='', this.description='']);
+  StockPortfolio([this.name='', this.description='']) {
+    this.stocks = toObservable(new List<Stock>());
+  }
   
 }
