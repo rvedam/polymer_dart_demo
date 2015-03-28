@@ -17,7 +17,7 @@ class Stock extends Observable {
   // use Yahoo's Finance API to update yourself
   updateInfo() {
     var url = 'http://query.yahooapis.com/v1/public/yql?q=';
-    var query = Uri.encodeFull('select * from yahoo.finance.quote where symbol in ("' + this.symbol + '")');
+    var query = Uri.encodeFull('select * from yahoo.finance.quotes where symbol in ("' + this.symbol + '")');
     query = query + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
     HttpRequest.getString(url+query).then((String responseText) {
       Map stockData = JSON.decode(responseText);

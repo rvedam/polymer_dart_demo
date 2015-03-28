@@ -9,6 +9,10 @@
   .field {
     margin-bottom: 8px;
   }
+  .table-header {
+    background: lightblue;
+    border: .5px;
+  }
   </style>
   <template>
     <div class="portfolio-display">
@@ -21,11 +25,11 @@
       <div class="field">
         <table>
           <tr>
-            <th><b>Symbol</b></th>
-            <th><b>Company Name</b></th>
-            <th><b>Current Price</b></th>
-            <th><b>Day High</b></th>
-            <th><b>Day Low</b></th>
+            <th class="table-header"><b>Symbol</b></th>
+            <th class="table-header"><b>Company Name</b></th>
+            <th class="table-header"><b>Current Price</b></th>
+            <th class="table-header"><b>Day High</b></th>
+            <th class="table-header"><b>Day Low</b></th>
           </tr>
           <tr template repeat="{{stock in portfolio.stocks}}">
               <td>{{stock.symbol}}</td>
